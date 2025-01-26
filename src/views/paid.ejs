@@ -9,19 +9,19 @@
                     <h1 class="text-white text-center mb-2">
                         <h1 class="text-white text-center">¡Felicidades! </h1>
                         <p class="text-white text-center" > orden N°: <%= details.orderId %></p>
-                        <p class="text-white text-center" > Monto pagado: S/. <%= details.orderTotalAmount /100 %></p>
 
-                        <h3 class="text-white text-center mb-5">Tu prueba ha sido exitosa</h3>
-                        
+                        <h3 class="text-white text-center mb-5">Tu pago ha sido exitosa</h3>
+                        <h3 class="text-white text-center mb-5">Serás redirigdo en breve</h3>
+
                     </h1>
+                    <script>
+                        setTimeout(function() {
+                          window.location.href = "http://localhost:4200/library/1";
+                        }, 5000);
+                      </script>
                     <% } else{ %>
                      <h1 class="text-white text-center mb-4"><%= response%></h1>
-                        <% } %>
-                            <form action="/checkout" method="post">
-                                <button class="btn btn-primary w-100">
-                                    volver a Probar
-                                </button>
-                            </form>
+                        <% }                             
             </div>
             <div class="col-md-4"></div>
         </div>
